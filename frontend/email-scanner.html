@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Email Scanner-AI Guard</title>
+
+<link rel="stylesheet" href="email-scanner.css">
+
+</head>
+
+
+<body>
+
+<!-- BACKGROUND -->
+<canvas id="bg"></canvas>
+
+
+<!-- TOP BAR -->
+<header class="topbar">
+
+    <div class="logo-section">
+
+        <img src="image/logo.png" class="logo">
+
+        <h2>AI PhishGuard</h2>
+
+    </div>
+
+
+    <a href="dashboard.html">
+        ← Back to Dashboard
+    </a>
+
+</header>
+
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+<h1 class="title">
+📧 Email Scanner
+</h1>
+
+
+
+<div class="card">
+
+<h3>
+Paste Email Content
+</h3>
+
+
+<textarea 
+id="emailInput"
+placeholder="Paste suspicious email here...">
+</textarea>
+
+
+<button type="button" onclick="scanEmail()">
+🔍 Analyze Email
+</button>
+
+
+</div>
+
+
+
+
+<!-- LOADING -->
+
+<div id="loading" class="loading hidden">
+
+<div class="spinner"></div>
+
+<p>
+AI is analyzing email...
+</p>
+
+</div>
+
+
+
+
+<!-- RESULT -->
+
+<div class="result-box" id="resultBox">
+
+<h3>
+Result will appear here
+</h3>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<!-- SIDE PANEL -->
+
+<div id="sidePanel" class="side-panel">
+
+<div class="side-content">
+
+<h2>
+🤖 AI Tips
+</h2>
+
+
+<ul>
+
+<li>Check sender email carefully</li>
+
+<li>Do not click unknown links</li>
+
+<li>Look for spelling mistakes</li>
+
+<li>Urgent emails can be fake</li>
+
+<li>Never share passwords</li>
+
+</ul>
+
+
+<button onclick="closeSidePanel()">
+Close
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<script src="email-scanner.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Scanner - AI PhishGuard</title>
+
+<link rel="stylesheet" href="url-scanner.css">
+</head>
+
+<body onload="openSidePanel()">
+
+<!-- BACKGROUND -->
+<canvas id="bg"></canvas>
+
+<!-- TOPBAR  -->
+<header class="topbar">
+    <div class="logo-section">
+        <img src="image/logo.png" class="logo">
+        <h2>AI PhishGuard</h2>
+    </div>
+
+    <a href="dashboard.html">← Back to Dashboard</a>
+</header>
+
+<!-- MAIN -->
+<div class="container">
+
+    <h1 class="title">🔗 URL Scanner</h1>
+
+    <!-- INPUT CARD -->
+    <div class="card">
+        <h3>Paste URL</h3>
+
+        <input type="text" id="urlInput"
+        placeholder="https://example.com">
+
+        <button onclick="scanURL()">🔍 Analyze URL</button>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>AI is analyzing URL...</p>
+    </div>
+
+    <!-- RESULT -->
+    <div class="result-box" id="resultBox">
+        <h3>Result will appear here</h3>
+    </div>
+
+</div>
+
+<!-- SIDE PANEL -->
+<div id="sidePanel" class="side-panel">
+    <div class="side-content">
+        <h2>🤖 AI Tips</h2>
+        <ul>
+            <li>Check HTTPS security</li>
+            <li>Avoid fake domains</li>
+            <li>Don't trust short links</li>
+            <li>Look for spelling mistakes</li>
+            <li>Verify official websites</li>
+        </ul>
+        <button onclick="closeSidePanel()">Close</button>
+    </div>
+</div>
+
+<script src="url-scanner.js"></script>
+
+</body>
+</html>

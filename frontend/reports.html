@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports - AI PhishGuard</title>
+
+<link rel="stylesheet" href="reports.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<canvas id="bg"></canvas>
+
+<!-- TOPBAR -->
+<header class="topbar">
+    <div class="logo-section">
+        <img src="image/logo.png" class="logo">
+        <h2>AI PhishGuard</h2>
+    </div>
+
+    <a href="dashboard.html">← Back< to Dashboard</a>
+</header>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <h1 class="title">📑 Scan Reports</h1>
+
+    <div class="filters">
+        <button onclick="filterData('all')">All</button>
+        <button onclick="filterData('email')">Email</button>
+        <button onclick="filterData('url')">URL</button>
+        <button onclick="filterData('phishing')">Phishing</button>
+        <button onclick="filterData('safe')">Safe</button>
+    </div>
+
+    <div class="table-box">
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Input</th>
+                    <th>Status</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+
+            <tbody id="reportBody">
+
+                <tr class="email safe">
+                    <td>Email</td>
+                    <td>user@gmail.com</td>
+                    <td>Safe</td>
+                    <td>12%</td>
+                    <td>2026-06-09</td>
+                    <td>04:34 PM</td>
+                </tr>
+
+                <tr class="url phishing">
+                    <td>URL</td>
+                    <td>http://fake-login.com</td>
+                    <td>Phishing</td>
+                    <td>90%</td>
+                    <td>2026-06-09</td>
+                    <td>04:34 AM</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+
+</div>
+
+<script src="reports.js"></script>
+</body>
+</html>

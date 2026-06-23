@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI PhishGuard Dashboard</title>
+<link rel="stylesheet" href="dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<canvas id="bg"></canvas>
+
+<!-- TOP BAR -->
+<header class="topbar">
+    <div class="logo-section">
+        <img src="image/logo.png" class="logo">
+        <h2>AI PhishGuard</h2>
+    </div>
+
+    <div class="profile">
+        <span>👤 User</span>
+    </div>
+</header>
+
+<div class="container">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h3>MENU</h3>
+    <ul>
+        <li class="active">📊 Dashboard</li>
+        <li onclick="openPage('email-scanner.html')">📧 Email Scanner</li>
+        <li onclick="openPage('url-scanner.html')">🔗 URL Scanner</li>
+        <li onclick="openPage('reports.html')">📑 Reports</li>
+        <li onclick="openPage('settings.html')">⚙ Settings</li>
+
+        <!-- FIXED LOGOUT -->
+        <li class="logout" onclick="logoutUser()">🚪 Logout</li>
+    </ul>
+</aside>
+
+<!-- MAIN -->
+<main class="content">
+
+<section class="welcome">
+    <h1>Welcome Back 👋</h1>
+    <p>Your AI Phishing Protection System is Active</p>
+</section>
+
+<section class="cards">
+
+    <div class="card">
+        <h3>Total Scans</h3>
+        <p>120</p>
+    </div>
+
+    <div class="card">
+        <h3>Safe</h3>
+        <p>85</p>
+    </div>
+
+    <div class="card danger">
+        <h3>Phishing</h3>
+        <p>35</p>
+    </div>
+
+    <div class="card">
+        <h3>Accuracy</h3>
+        <p>91%</p>
+    </div>
+
+</section>
+
+<section class="box">
+    <h3>⚡ Quick Actions</h3>
+    <button onclick="openPage('email-scanner.html')">📧 Scan Email</button>
+    <button onclick="openPage('url-scanner.html')">🔗 Scan URL</button>
+</section>
+
+<section class="box">
+    <h3>🧠 AI System Status</h3>
+    <p>🟢 Active & Monitoring</p>
+</section>
+
+<section class="box">
+    <h3>📊 Detection Overview</h3>
+    <canvas id="miniChart"></canvas>
+</section>
+
+<section class="box">
+    <h3>🕒 Recent Activity</h3>
+    <p>No recent scans yet</p>
+</section>
+
+<!-- LOGOUT LOADING -->
+<div id="logoutLoading">
+    <div class="loader"></div>
+    <h2>Logging out...</h2>
+</div>
+
+</main>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
