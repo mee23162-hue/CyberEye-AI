@@ -82,3 +82,29 @@ requestAnimationFrame(animate);
 
 animate();
 }
+async function loadDashboard() {
+
+    try {
+
+        let response = await fetch("http://127.0.0.1:8000/api/reports");
+
+        let data = await response.json();
+
+        document.getElementById("totalScans").innerText = data.total_scans;
+        document.getElementById("safeScans").innerText = data.safe;
+        document.getElementById("phishingScans").innerText = data.phishing;
+
+        if(data.accuracy){
+            document.getElementById("accuracy").innerText = data.accuracy;
+        }
+
+    } catch (error) {
+
+        console.log(error);
+        alert(error.message);
+
+    }
+
+}
+
+loadDashboard();
